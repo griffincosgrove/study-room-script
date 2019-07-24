@@ -3,6 +3,7 @@ import datetime as dt
 import openpyxl
 from openpyxl import Workbook
 
+
 wb = Workbook()
 ws = wb.active
 ws.title = 'Rooms'
@@ -84,41 +85,44 @@ def rooms():
     if pg.locateOnScreen('D:/JMU/roompics/2201.png'):
         room_list.append('2201')
 
-    if pg.locateOnScreen('D:/JMU/roompics/2203.png'):
+    elif pg.locateOnScreen('D:/JMU/roompics/2203.png'):
         room_list.append('2203')
 
-    if pg.locateOnScreen('D:/JMU/roompics/2205.png'):
+    elif pg.locateOnScreen('D:/JMU/roompics/2205.png'):
         room_list.append('2205')
 
-    if pg.locateOnScreen('D:/JMU/roompics/2207.png'):
+    elif pg.locateOnScreen('D:/JMU/roompics/2207.png'):
         room_list.append('2207')
 
     #if pg.locateOnScreen('D:/JMU/roompics/2209.png'):
         #room_list.append('2209')
 
-    if pg.locateOnScreen('D:/JMU/roompics/2211.png'):
+    elif pg.locateOnScreen('D:/JMU/roompics/2211.png'):
         room_list.append('2211')
 
-    if pg.locateOnScreen('D:/JMU/roompics/2213.png'):
+    elif pg.locateOnScreen('D:/JMU/roompics/2213.png'):
         room_list.append('2213')
 
-    if pg.locateOnScreen('D:/JMU/roompics/2215.png'):
+    elif pg.locateOnScreen('D:/JMU/roompics/2215.png'):
         room_list.append('2215')
 
-    if pg.locateOnScreen('D:/JMU/roompics/2203.png'):
+    elif pg.locateOnScreen('D:/JMU/roompics/2203.png'):
         room_list.append('2217')
 
-    if pg.locateOnScreen('D:/JMU/roompics/2219.png'):
+    elif pg.locateOnScreen('D:/JMU/roompics/2219.png'):
         room_list.append('2219')
 
-    if pg.locateOnScreen('D:/JMU/roompics/2221.png'):
+    elif pg.locateOnScreen('D:/JMU/roompics/2221.png'):
         room_list.append('2221')
 
-    if pg.locateOnScreen('D:/JMU/roompics/2223.png'):
+    elif pg.locateOnScreen('D:/JMU/roompics/2223.png'):
         room_list.append('2223')
 
-    if pg.locateOnScreen('D:/JMU/roompics/2225.png'):
+    elif pg.locateOnScreen('D:/JMU/roompics/2225.png'):
         room_list.append('2225')
+
+    else:
+        print("there are no rooms available!")
 
     for room in room_list:
         print(room)
