@@ -94,7 +94,7 @@ def rooms():
     elif pg.locateOnScreen('D:/JMU/roompics/2207.png'):
         room_list.append('2207')
 
-    #if pg.locateOnScreen('D:/JMU/roompics/2209.png'):
+    #elif pg.locateOnScreen('D:/JMU/roompics/2209.png'):
         #room_list.append('2209')
 
     elif pg.locateOnScreen('D:/JMU/roompics/2211.png'):
