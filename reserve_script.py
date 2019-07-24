@@ -4,19 +4,22 @@ import openpyxl
 from openpyxl import Workbook
 
 
-wb = Workbook()
-ws = wb.active
-ws.title = 'Rooms'
-w2 = wb.create_sheet("IDs", 1)
-for sheet in wb:
-    print(sheet.title)
+def create_excel():
+    wb = Workbook()
+    ws = wb.active
+    ws.title = 'Rooms'
+    w2 = wb.create_sheet("IDs", 1)
+    for sheet in wb:
+        print(sheet.title)
 
-dateCell = ws.cell(row=1, column=1, value='Date')
-dateCell = ws.cell(row=1, column=2, value='Time')
-dateCell = ws.cell(row=1, column=3, value='Room')
-dateCell = ws.cell(row=1, column=4, value='Name')
-roomCell = 2
-nameCell = 2
+    dateCell = ws.cell(row=1, column=1, value='Date')
+    dateCell = ws.cell(row=1, column=2, value='Time')
+    dateCell = ws.cell(row=1, column=3, value='Room')
+    dateCell = ws.cell(row=1, column=4, value='Name')
+    roomCell = 2
+    nameCell = 2
+
+    
 #next step is to work on the excel writing and saving logic :)
 #i think this needs to be done inside the respective methods :)
 
