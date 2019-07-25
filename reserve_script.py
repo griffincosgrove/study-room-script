@@ -19,13 +19,13 @@ def create_excel():
     roomCell = 2
     nameCell = 2
 
-    
+
 #next step is to work on the excel writing and saving logic :)
 #i think this needs to be done inside the respective methods :)
 
 def textboxes():
     #captures locations of textboxes
-    textb_list = list(pg.locateAllOnScreen('D:\JMU\ox.png'))
+    textb_list = list(pg.locateAllOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots\ox.png'))
     #locates and enters username
     pg.moveTo(textb_list[0])
     pg.click(textb_list[0])
@@ -33,25 +33,25 @@ def textboxes():
     #locates and enters password
     pg.moveTo(textb_list[1])
     pg.click(textb_list[1])
-    pg.typewrite("password")  # replace with password
+    pg.typewrite("Fuckpike624$")  # replace with password
 
 def signin():
     #locates and hits sign-in button
-    sign_in_location = (pg.locateOnScreen('D:\JMU\sign_in2.png'))
+    sign_in_location = (pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots\sign_in2.png'))
     pg.moveTo(sign_in_location)
     pg.click(sign_in_location)
 
 def reserveButton():
     #locate and click reserve a room
     pg._autoPause(.5,.5)
-    reserve = pg.locateOnScreen('D:\JMU\serve.png')
+    reserve = pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots\serve.png')
     #pg.center(reserve)
     pg.moveTo(reserve)
     pg.click(reserve)
 
 def arrows_weekday():
     pg._autoPause(.5, .5)
-    arrow_list = list(pg.locateAllOnScreen('D:\JMU\mk.png'))
+    arrow_list = list(pg.locateAllOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots\arrow.png'))
     pg.moveTo(arrow_list[0])
     pg.click(arrow_list[0])
     pg.press('enter')
@@ -69,7 +69,7 @@ def arrows_weekday():
 
 def arrows_weekend():
     pg._autoPause(.5, .5)
-    arrow_list = list(pg.locateAllOnScreen('D:\JMU\mk.png'))
+    arrow_list = list(pg.locateAllOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots\mk.png'))
     pg.moveTo(arrow_list[0])
     pg.click(arrow_list[0])
     pg.press('enter')
@@ -85,49 +85,49 @@ def arrows_weekend():
 
 def rooms():
     room_list = []
-    if pg.locateOnScreen('D:/JMU/roompics/2201.png'):
+    if pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2201.png'):
         room_list.append('2201')
+        print('2201')
 
-    elif pg.locateOnScreen('D:/JMU/roompics/2203.png'):
+    elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2203.png'):
         room_list.append('2203')
 
-    elif pg.locateOnScreen('D:/JMU/roompics/2205.png'):
+    elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2205.png'):
         room_list.append('2205')
 
-    elif pg.locateOnScreen('D:/JMU/roompics/2207.png'):
+    elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2207.png'):
         room_list.append('2207')
 
-    #elif pg.locateOnScreen('D:/JMU/roompics/2209.png'):
+    #elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2209.png'):
         #room_list.append('2209')
 
-    elif pg.locateOnScreen('D:/JMU/roompics/2211.png'):
+    elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2211.png'):
         room_list.append('2211')
 
-    elif pg.locateOnScreen('D:/JMU/roompics/2213.png'):
+    elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2213.png'):
         room_list.append('2213')
 
-    elif pg.locateOnScreen('D:/JMU/roompics/2215.png'):
+    elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2215.png'):
         room_list.append('2215')
 
-    elif pg.locateOnScreen('D:/JMU/roompics/2203.png'):
+    elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2203.png'):
         room_list.append('2217')
 
-    elif pg.locateOnScreen('D:/JMU/roompics/2219.png'):
+    elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2219.png'):
         room_list.append('2219')
 
-    elif pg.locateOnScreen('D:/JMU/roompics/2221.png'):
+    elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2221.png'):
         room_list.append('2221')
 
-    elif pg.locateOnScreen('D:/JMU/roompics/2223.png'):
+    elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2223.png'):
         room_list.append('2223')
 
-    elif pg.locateOnScreen('D:/JMU/roompics/2225.png'):
+    elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2225.png'):
         room_list.append('2225')
-
-    else:
-        print("there are no rooms available!")
+        print('2225')
 
     for room in room_list:
+        print('rooms:')
         print(room)
 
     #add error check here to do it in full window too possibly
@@ -135,12 +135,12 @@ def rooms():
     pg.click()
     room = room_list[0]
     print(room)
-    pg.moveTo('D:/JMU/select.png')
+    pg.moveTo(r'C:\Users\griff\projects\study-room-script\screenshots/select.png')
     pg.click()
     pg._autoPause(.5,.5)
-    pg.moveTo('D:/JMU/confirm.png')
+    pg.moveTo(r'C:\Users\griff\projects\study-room-script\screenshots/confirm.png')
     pg.click()
-    pg.moveTo('D://JMU/return.png')
+    pg.moveTo(r'C:\Users\griff\projects\study-room-script\screenshots/return.png')
     pg.click()
 
 
@@ -166,7 +166,7 @@ def two_hours():
     pg.press('enter')
 
 def click_search():
-    search = pg.locateOnScreen('D:/JMU/search.png')
+    search = pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/search.png')
     pg.moveTo(search)
     pg.click(search)
 
@@ -175,7 +175,7 @@ def click_search():
 #textboxes()
 #signin()
 #reserveButton()
-#arrows_weekday() if statement here to run weekend or friday or sat. sunday reg hours
-#rooms()
+#arrows_weekday()  #if statement here to run weekend or friday or sat. sunday reg hours
+rooms()
 
-createExcel()
+#createExcel()
