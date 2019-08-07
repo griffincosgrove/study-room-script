@@ -4,20 +4,20 @@ import openpyxl
 from openpyxl import Workbook
 
 
-def create_excel():
-    wb = Workbook()
-    ws = wb.active
-    ws.title = 'Rooms'
-    w2 = wb.create_sheet("IDs", 1)
-    for sheet in wb:
-        print(sheet.title)
+# def create_excel():
+#     wb = Workbook()
+#     ws = wb.active
+#     ws.title = 'Rooms'
+#     w2 = wb.create_sheet("IDs", 1)
+#     for sheet in wb:
+#         print(sheet.title)
 
-    dateCell = ws.cell(row=1, column=1, value='Date')
-    dateCell = ws.cell(row=1, column=2, value='Time')
-    dateCell = ws.cell(row=1, column=3, value='Room')
-    dateCell = ws.cell(row=1, column=4, value='Name')
-    roomCell = 2
-    nameCell = 2
+#     dateCell = ws.cell(row=1, column=1, value='Date')
+#     dateCell = ws.cell(row=1, column=2, value='Time')
+#     dateCell = ws.cell(row=1, column=3, value='Room')
+#     dateCell = ws.cell(row=1, column=4, value='Name')
+#     roomCell = 2
+#     nameCell = 2
 
 
 #next step is to work on the excel writing and saving logic :)
@@ -85,9 +85,8 @@ def arrows_weekend():
 
 def rooms():
     room_list = []
-    if pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2201.png'):
+    if pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/22011.png'):
         room_list.append('2201')
-        print('2201')
 
     elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2203.png'):
         room_list.append('2203')
@@ -124,11 +123,6 @@ def rooms():
 
     elif pg.locateOnScreen(r'C:\Users\griff\projects\study-room-script\screenshots/2225.png'):
         room_list.append('2225')
-        print('2225')
-
-    for room in room_list:
-        print('rooms:')
-        print(room)
 
     #add error check here to do it in full window too possibly
     pg.moveTo(x =40, y =295, pause=1)
@@ -140,6 +134,7 @@ def rooms():
     pg._autoPause(.5,.5)
     pg.moveTo(r'C:\Users\griff\projects\study-room-script\screenshots/confirm.png')
     pg.click()
+    pg._autoPause(.5, .5)
     pg.moveTo(r'C:\Users\griff\projects\study-room-script\screenshots/return.png')
     pg.click()
 
@@ -171,11 +166,11 @@ def click_search():
     pg.click(search)
 
 
-
+ 
 #textboxes()
 #signin()
 #reserveButton()
 #arrows_weekday()  #if statement here to run weekend or friday or sat. sunday reg hours
-rooms()
+#rooms()
 
-#createExcel()
+#createExcel()   
