@@ -33,7 +33,7 @@ def textboxes():
     #locates and enters password
     pg.moveTo(textb_list[1])
     pg.click(textb_list[1])
-    pg.typewrite("Fuckpike624$")  # replace with password
+    pg.typewrite("yourpassword")  # replace with password
 
 def signin():
     #locates and hits sign-in button
